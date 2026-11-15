@@ -1,0 +1,12 @@
+<Context>
+    <Resource name="jdbc/DepartmentStore"
+              auth="Container"
+              type="javax.sql.DataSource"
+              driverClassName="com.mysql.cj.jdbc.Driver"
+              url="${departmentstore.db.url}"
+              username="${departmentstore.db.username}"
+              password="${departmentstore.db.password}"
+              maxTotal="20"
+              maxIdle="10"
+              maxWaitMillis="10000"/>
+</Context>

@@ -1,0 +1,35 @@
+<%@ page import="DAO.CartDAO,DAO.CustomerDAO,DAO.ProductDAO,DAO.ReceiptDAO,java.sql.Connection,java.sql.SQLException,javax.naming.InitialContext,javax.naming.NamingException,javax.sql.DataSource,java.time.LocalDate,java.util.UUID,java.text.NumberFormat,java.util.Locale,models.Address4,models.Cart4,models.Customer4,models.Product4,models.Receipt4" %>
+<%!
+    private String html(String value) {
+        if (value == null) return "";
+        return value.replace("&", "&amp;").replace("<", "&lt;")
+                .replace(">", "&gt;").replace("\"", "&quot;")
+                .replace("'", "&#39;");
+    }
+
+    private String money(float amount) {
+        return NumberFormat.getIntegerInstance(new Locale("vi", "VN"))
+                .format(Math.round(amount)) + "&#273;";
+    }
+
+    private String maskedPhone(String phone) {
+        if (phone == null || phone.length() < 4) return phone == null ? "" : phone;
+        return "••••••" + phone.substring(phone.length() - 3);
+    }
+
+    private String formatAddress(Address4 address) {
+        if (address == null) return "";
+        java.util.List<String> parts = new java.util.ArrayList<>();
+        for (String part : new String[] { address.getHouseNumber(), address.getStreet(),
+                address.getWard(), address.getCity() }) {
+            if (part != null && !part.trim().isEmpty()) parts.add(part.trim());
+        }
+        return String.join(", ", parts);
+    }
+
+    private Connection openStoreConnection() throws NamingException, SQLException {
+        DataSource dataSource = (DataSource) new InitialContext()
+                .lookup("java:comp/env/jdbc/DepartmentStore");
+        return dataSource.getConnection();
+    }
+%>
