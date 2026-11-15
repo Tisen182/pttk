@@ -7,7 +7,7 @@
             ? (Cart4) session.getAttribute("cart") : null;
     int itemCount = 0;
     if (cart != null) {
-        for (models.CartDetails4 detail : cart.getCartDetails()) {
+        for (model.CartDetails4 detail : cart.getCartDetails()) {
             itemCount += detail.getQuantity();
         }
     }

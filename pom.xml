@@ -41,8 +41,8 @@
                 <version>3.13.0</version>
                 <configuration>
                     <includes>
-                        <include>DAO/**/*.java</include>
-                        <include>models/**/*.java</include>
+                        <include>dao/**/*.java</include>
+                        <include>model/**/*.java</include>
                     </includes>
                 </configuration>
             </plugin>
@@ -51,7 +51,7 @@
                 <artifactId>maven-war-plugin</artifactId>
                 <version>3.4.0</version>
                 <configuration>
-                    <warSourceDirectory>${project.basedir}/jsp</warSourceDirectory>
+                    <warSourceDirectory>${project.basedir}/view</warSourceDirectory>
                     <webXml>${project.basedir}/src/main/webapp/WEB-INF/web.xml</webXml>
                     <failOnMissingWebXml>true</failOnMissingWebXml>
                     <webResources>

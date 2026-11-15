@@ -1,9 +1,9 @@
-package DAO;
+package dao;
 
 import java.sql.SQLException;
-import models.Cart4;
-import models.CartDetails4;
-import models.Product4;
+import model.Cart4;
+import model.CartDetails4;
+import model.Product4;
 
 public class CartDAO extends DAO {
     private final ProductDAO productDAO;

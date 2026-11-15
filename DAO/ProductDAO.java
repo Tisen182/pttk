@@ -1,11 +1,11 @@
-package DAO;
+package dao;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-import models.Product4;
+import model.Product4;
 
 public class ProductDAO extends DAO {
     public ProductDAO(java.sql.Connection con) {

@@ -3,6 +3,17 @@
 Ứng dụng JSP/Java theo sơ đồ triển khai: trình duyệt → Apache Tomcat 9 → MySQL 8.
 Phạm vi mã nguồn hiện tại tập trung vào tìm kiếm sản phẩm và đặt hàng trực tuyến.
 
+## Cấu trúc package
+
+- `view/`: trang JSP và CSS giao diện.
+- `dao/`: truy cập dữ liệu và các truy vấn JDBC.
+- `model/`: các lớp dữ liệu nghiệp vụ.
+- `src/main/resources/db/`: schema và dữ liệu demo.
+- `src/main/webapp/`: cấu hình web và JNDI cho Tomcat.
+
+Tên package Java dùng chữ thường (`dao`, `model`) theo quy ước Java và sơ đồ package.
+Cấu hình Maven đóng gói nội dung `view/` ở thư mục gốc WAR để giữ nguyên URL các trang.
+
 ## Yêu cầu
 
 - JDK 8 trở lên

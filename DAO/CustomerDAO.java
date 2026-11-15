@@ -1,4 +1,4 @@
-package DAO;
+package dao;
 
 import java.security.GeneralSecurityException;
 import java.security.MessageDigest;
@@ -12,8 +12,8 @@ import java.util.Arrays;
 import java.util.Base64;
 import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.PBEKeySpec;
-import models.Address4;
-import models.Customer4;
+import model.Address4;
+import model.Customer4;
 
 public class CustomerDAO extends DAO {
     private static final int PASSWORD_ITERATIONS = 120_000;

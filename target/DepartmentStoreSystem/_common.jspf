@@ -1,4 +1,4 @@
-<%@ page import="DAO.CartDAO,DAO.CustomerDAO,DAO.ProductDAO,DAO.ReceiptDAO,java.sql.Connection,java.sql.SQLException,javax.naming.InitialContext,javax.naming.NamingException,javax.sql.DataSource,java.time.LocalDate,java.util.UUID,java.text.NumberFormat,java.util.Locale,models.Address4,models.Cart4,models.Customer4,models.Product4,models.Receipt4" %>
+<%@ page import="dao.CartDAO,dao.CustomerDAO,dao.ProductDAO,dao.ReceiptDAO,java.sql.Connection,java.sql.SQLException,javax.naming.InitialContext,javax.naming.NamingException,javax.sql.DataSource,java.time.LocalDate,java.util.UUID,java.text.NumberFormat,java.util.Locale,model.Address4,model.Cart4,model.Customer4,model.Product4,model.Receipt4" %>
 <%!
     private String html(String value) {
         if (value == null) return "";

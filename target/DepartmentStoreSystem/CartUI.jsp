@@ -128,7 +128,7 @@
                 </thead>
                 <tbody>
                 <% int row = 0;
-                   for (models.CartDetails4 detail : cart.getCartDetails()) {
+                   for (model.CartDetails4 detail : cart.getCartDetails()) {
                        Product4 product = detail.getProduct();
                        row++; %>
                     <tr>

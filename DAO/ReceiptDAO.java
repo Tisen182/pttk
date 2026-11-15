@@ -1,4 +1,4 @@
-package DAO;
+package dao;
 
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -6,8 +6,8 @@ import java.sql.Savepoint;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
-import models.Receipt4;
-import models.ReceiptDetails4;
+import model.Receipt4;
+import model.ReceiptDetails4;
 
 public class ReceiptDAO extends DAO {
     public ReceiptDAO(java.sql.Connection con) {
