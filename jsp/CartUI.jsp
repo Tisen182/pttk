@@ -94,7 +94,7 @@
 
     <% if (success != null) { %>
         <div class="notice" role="status">
-            Đặt hàng thành công! Mã đơn hàng của bạn là
+            Lưu đơn hàng thành công! Mã đơn hàng của bạn là
             <strong><%= html(success) %></strong>. Nhân viên sẽ sớm xác nhận đơn hàng.
         </div>
     <% } %>
